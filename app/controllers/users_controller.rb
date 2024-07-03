@@ -1,5 +1,8 @@
 # app/controllers/users_controller.rb
 class UsersController < ApplicationController
+    
+    before_action :find_user_by_name, except: %i[create new index]
+
     def index
       @users = User.all
       render json: @users
@@ -44,6 +47,15 @@ class UsersController < ApplicationController
   
     private
   
+    def find_user_by_name
+        @user = User.find_by(name: params[:id])
+        if @user
+            render json: @user
+        else
+            render json: { error: 'User not found' }, status: :not_found
+        end
+    end
+
     def user_params
         params.require(:user).permit(:name, :email, :password, :password_confirmation)
     end
