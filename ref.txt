@@ -1,0 +1,18 @@
+# Gemfile
+gem 'mongoid'
+
+rails g controller Posts
+
+rails g controller Users
+
+#
+show dbs
+
+#Select DB 
+use ror_app_dev
+
+# show tables 
+show collections
+
+# select data
+db.posts.find()
