@@ -5,7 +5,10 @@ rails g controller Posts
 
 rails g controller Users
 
-#
+
+mongosh
+
+#all databases
 show dbs
 
 #Select DB 
