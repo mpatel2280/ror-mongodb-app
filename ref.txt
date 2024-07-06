@@ -5,6 +5,7 @@ rails g controller Posts
 
 rails g controller Users
 
+rails g controller Products
 
 mongosh
 
@@ -19,3 +20,15 @@ show collections
 
 # select data
 db.posts.find()
+
+
+If found err
+MongoNetworkError: connect ECONNREFUSED 127.0.0.1:27017
+sudo service mongod start
+
+or remove 
+
+/tmp/mongodb-27017*
+
+and then restart the service 
+sudo service mongod start / restart 

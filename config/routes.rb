@@ -14,4 +14,8 @@ Rails.application.routes.draw do
 
   resources :books
 
+  resources :products
+
+  get '/get_products', to: "products#get_products"
+
 end
