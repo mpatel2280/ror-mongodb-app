@@ -45,7 +45,7 @@ class ProductsController < ApplicationController
     # External API call
     def get_products
         url = 'https://dummyjson.com/products'
-        response = RestClient.get(url)
+        response = RestClient.get(url)        
         render json: response, status: :ok
     end
   
