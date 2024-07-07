@@ -18,4 +18,7 @@ Rails.application.routes.draw do
 
   get '/get_products', to: "products#get_products"
 
+  get 'list_files', to: 'list_directory_files#index'
+  #root 'list_directory_files#index'
+
 end
