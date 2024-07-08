@@ -21,4 +21,6 @@ Rails.application.routes.draw do
   get 'list_files', to: 'list_directory_files#index'
   #root 'list_directory_files#index'
 
+  get 'export_data/export', to: 'export_data#export'
+
 end

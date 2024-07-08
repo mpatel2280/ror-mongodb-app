@@ -65,6 +65,10 @@ gem 'mongoid'
 # Use ActiveModel has_secure_password
 gem 'bcrypt', '~> 3.1.7'
 
+# For External API
 gem 'httparty'
-
 gem 'rest-client'
+
+# Excel file
+gem 'axlsx'
+gem 'axlsx_rails'  # Optional, for easier integration with Rails
